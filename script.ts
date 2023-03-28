@@ -260,7 +260,7 @@ function draw(): void {
     requestAnimationFrame(draw);
 }
 
-initGame(15, 10, 30);
+initGame(9, 9, 10);
 draw();
 
 if (board != null) {

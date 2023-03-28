@@ -228,7 +228,7 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
-initGame(15, 10, 30);
+initGame(9, 9, 10);
 draw();
 if (board != null) {
     board.onmousedown = function (e) {

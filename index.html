@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false"> <!-- 원활한 게임 진행을 위한 우클릭/드래그 방지 -->
-    <div class="main">
-        <div class="top">
-            <div class="menu flags">
-                <img src="img/flagicon.svg" width="30">
-                <span>0</span>
-            </div>
-
-            <div class="restart">
-                <img src="img/smile.png" width="30" height="30">
-            </div>
-
-            <div class="menu timer">
-                <span>0</span>
-                <img src="img/timer.svg" width="30">
-            </div>
+    <div class="window">
+        <!-- menu -->
+        <div class="window-menu">
+            <button onclick="initGame(9, 9, 10)">초급</button>
+            <button onclick="initGame(16, 16, 40)">중급</button>
+            <button onclick="initGame(30, 16, 99)">고급</button>
+            <button onclick="setCustomGame()">커스텀</button>
         </div>
 
-        <canvas id="board"></canvas>
+        <!-- game -->
+        <div class="main">
+            <div class="top">
+                <div class="menu flags">
+                    <img src="img/flagicon.svg" width="30">
+                    <span>0</span>
+                </div>
+
+                <div class="restart">
+                    <img src="img/smile.png" width="30" height="30">
+                </div>
+
+                <div class="menu timer">
+                    <span>0</span>
+                    <img src="img/timer.svg" width="30">
+                </div>
+            </div>
+
+            <canvas id="board"></canvas>
+        </div>
     </div>
 
     <script src="script.js"></script>

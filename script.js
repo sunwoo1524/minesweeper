@@ -228,6 +228,23 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
+function setCustomGame() {
+    var x = Number(prompt("크기는 무제한이지만, 크면 클 수록 렉이 많이 걸릴 수 있습니다.\n최소 지뢰 개수는 1개이며 게임 크기와 같거나 클 수 없습니다.\n가로 크기:"));
+    var y = Number(prompt("세로 크기"));
+    var m = Number(prompt("지뢰 개수"));
+    if (!Number.isInteger(x) || !Number.isInteger(y) || !Number.isInteger(m)) {
+        alert("게임 크기와 지뢰 개수는 자연수여야 합니다.");
+    }
+    else if (x < 1 || y < 1) {
+        alert("게임 크기는 1보다 커야합니다.");
+    }
+    else if (m >= x * y) {
+        alert("지뢰 개수는 게임 크기와 같거나 클 수 없습니다.");
+    }
+    else {
+        initGame(x, y, m);
+    }
+}
 initGame(9, 9, 10);
 draw();
 if (board != null) {
